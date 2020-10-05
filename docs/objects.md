@@ -187,14 +187,14 @@
 | Naam | Omschrijving | Type |
 |-----:|:-------------|:----|
 | **id** | Unieke identifier voor deze reis. | String |
-| **ludMessages** | Bevat een array van `ludMessage` objecten. | List of LudMessage |
+| **ludMessages** | Bevat een array van `ludMessage` objecten. | List of [LudMessage](#lud_message) |
 | **fasterJourneyId** | Bevat een unieke identifier van een snellere reis. | String? |
 | **departure** | Bevat een vertrekdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
 | **arrival** | Bevat een aankomstdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
 | **numberOfChanges** | Bevat het aantal overstappen dat in de reis gemaakt moet worden. | Integer |
-| **legs** | Bevat een array van `leg` objecten. | List of Leg |
-| **fareInfo** | Bevat een `fareInfo` object. | FareInfo
-| **occupancy** | ? | Integer |
+| **legs** | Bevat een array van `leg` objecten. | List of [Leg](#leg) |
+| **fareInfo** | Bevat een `fareInfo` object. | [FareInfo](#fare_info) |
+| **occupancy** | Onbekend. | Integer |
 
 ---
 
@@ -215,14 +215,14 @@
 |-----:|:-------------|:-----|
 | **type** | Bevat het type leg (zie `types.md` voor meer informatie). | LegType |
 | **duration** | Duur van leg in de reis in format "hh:mm" | String? |
-| **mode** | Bevat een `mode` object. | Mode |
+| **mode** | Bevat een `mode` object. | [Mode](#mode) |
 | **destination** | Bevat de naam van de bestemming van deze leg. | String? |
-| **operator** | Bevat een `operator` object. | Operator? |
+| **operator** | Bevat een `operator` object. | [Operator](#operator)? |
 | **service** | Nummer van het desbetreffende vervoersmiddel | Integer? |
-| **attributes** | Bevat een `attribute` object.. | List of Attribute? |
+| **attributes** | Bevat een `attribute` object.. | List of [Attribute](#attribute)? |
 | **disturbancePlannerIds** | Onbekend. | |
 | **serivceMessageIds** | Onbekend. | |
-| **stops** | Bevat een array van `stop` objecten. | List of Stop |
+| **stops** | Bevat een array van `stop` objecten. | List of [Stop](#stop) |
 
 ---
 
@@ -247,7 +247,7 @@
 | **id** | Unieke identifier voor deze locatie. | String |
 | **type** | Bevat het type locatie (zie `types.md` voor meer informatie). | LocationType |
 | **name** | Bevat de naam van de locatie. | String |
-| **latLong** | Bevat een `latLong` object. | LatLong |
+| **latLong** | Bevat een `latLong` object. | [LatLong](#lat_long) |
 
 ---
 
@@ -257,7 +257,7 @@
 | Naam | Omschrijving | Type |
 |-----:|:-------------|:-----|
 | **houseNr** | Bevat het huisnummer van het adres | String |
-| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | Location -> Place |
+| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | [Location -> Place](#location_place) |
 
 ---
 
@@ -268,8 +268,8 @@
 |-----:|:-------------|:-----|
 | **stationId** | Bevat de afkorting zoals deze bekend is bij de NS. | String |
 | **stationType** | Bevat het type station (zie `types.md` voor meer informatie). | StationType |
-| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | Location -> Place |
-| **urls** | Bevat een `urls` object. | Urls |
+| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | [Location -> Place](#location_place) |
+| **urls** | Bevat een `urls` object. | [Urls](#urls) |
 
 ---
 
@@ -289,7 +289,7 @@
 
 | Naam | Omschrijving | Type |
 |-----:|:-------------|:-----|
-| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | Location -> Place |
+| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | [Location -> Place](#location_place) |
 
 ---
 
@@ -412,7 +412,7 @@
 | **arrival** | Bevat een aankomstdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
 | **departure** | Bevat een vertrekdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
 | **platform** | Bevat het spoor of platform waar deze trein of bus (o.i.d.) stopt. | String |
-| **location** | Bevat een `location` object. | Location |
+| **location** | Bevat een `location` object. | [Location](#location) |
 | **fallbackName** | Onbekend. | |
 
 ---

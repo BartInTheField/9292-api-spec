@@ -229,13 +229,13 @@
 <a id="line"></a>
 ## Object: `line`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **name** | Bevat de naam van de lijn. |
-| **operatorName** | Bevat de naam van de operator (bv. RET) |
-| **modeName** | Bevat de naam van de mode (bv. Metro) |
-| **modeType** | Bevat het type van de mode (bv. Metro) |
-| **destinationNames** | Bevat een array van namen van de bestemmingen van de lijn. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **name** | Bevat de naam van de lijn. | String |
+| **operatorName** | Bevat de naam van de operator (bv. RET) | String |
+| **modeName** | Bevat de naam van de mode (bv. Metro) | String |
+| **modeType** | Bevat het type van de mode (bv. Metro) | String |
+| **destinationNames** | Bevat een array van namen van de bestemmingen van de lijn. | List of String |
 
 ---
 
@@ -276,11 +276,11 @@
 <a id="location_stop"></a>
 ## Object: `location` -> `stop`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **stopType** | Type van de halte. Bijv. `Bushalte` |
-| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. |
-| **urls** | Bevat een `urls` object. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **stopType** | Type van de halte. Bijv. `Bushalte` | String |
+| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | [Location -> Place](#location_place) |
+| **urls** | Bevat een `urls` object. | [Urls](#urls) |
 
 ---
 

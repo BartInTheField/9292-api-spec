@@ -200,10 +200,10 @@
 <a id="lat_long"></a>
 ## Object: `latLong`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **lat** | Bevat de latitude van de locatie. |
-| **long** | Bevat de longitude van de locatie. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **lat** | Bevat de latitude van de locatie. | Float |
+| **long** | Bevat de longitude van de locatie. | Float |
 
 ---
 
@@ -309,30 +309,32 @@
 <a id="lud_message"></a>
 ## Object: `ludMessage`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **text** | Bevat een waarschuwingstekst. |
-| **url** | Bevat een URL naar een webpagina over de waarschuwing. (optioneel) |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **text** | Bevat een waarschuwingstekst. | String |
+| **url** | Bevat een URL naar een webpagina over de waarschuwing. | String? |
 
 ---
 
 <a id="mode"></a>
 ## Object: `mode`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **type** | Bevat het type (zie `types.md` voor meer informatie). |
-| **name** | Bevat de naam van deze mode. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **type** | Bevat het type (zie `types.md` voor meer informatie). | ModeType |
+| **name** | Bevat de naam van deze mode. | String |
 
 ---
 
 <a id="operator"></a>
 ## Object: `operator`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **type** | Bevat het type van de operator (zie `types.md` voor meer informatie). |
-| **name** | Bevat de naam van de operator. |
+| Naam | Omschrijving | Types |
+|-----:|:-------------|:------|
+| **type** | Bevat het type van de operator (zie `types.md` voor meer informatie). | OperatorType |
+| **name** | Bevat de naam van de operator. | String |
+| **contactpageurl** | Bevat een link naar het contact formulier van de operator | String |
+| **code** | Bevat een unieke code voor elke operator | String |
 
 ---
 

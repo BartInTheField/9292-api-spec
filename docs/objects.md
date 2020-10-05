@@ -172,16 +172,17 @@
 <a id="journey"></a>
 ## Object: `journey`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **id** | Unieke identifier voor deze reis. |
-| **ludMessages** | Bevat een array van `ludMessage` objecten. |
-| **fasterJourneyId** | Bevat een unieke identifier van een snellere reis. (optioneel) |
-| **departure** | Bevat een vertrekdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. |
-| **arrival** | Bevat een aankomstdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. |
-| **numberOfChanges** | Bevat het aantal overstappen dat in de reis gemaakt moet worden. |
-| **legs** | Bevat een array van `leg` objecten. |
-| **fareInfo** | Bevat een `fareInfo` object. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:----|
+| **id** | Unieke identifier voor deze reis. | String |
+| **ludMessages** | Bevat een array van `ludMessage` objecten. | List of LudMessage |
+| **fasterJourneyId** | Bevat een unieke identifier van een snellere reis. (optioneel) | String |
+| **departure** | Bevat een vertrekdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
+| **arrival** | Bevat een aankomstdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
+| **numberOfChanges** | Bevat het aantal overstappen dat in de reis gemaakt moet worden. | Integer |
+| **legs** | Bevat een array van `leg` objecten. | List of Leg |
+| **fareInfo** | Bevat een `fareInfo` object. | FareInfo
+| **occupancy** | ? | Integer |
 
 ---
 

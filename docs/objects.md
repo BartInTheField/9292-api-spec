@@ -16,6 +16,7 @@
 * [`leg`](#leg)
 * [`line`](#line)
 * [`location`](#location)
+	* [`address`](#location_address)
 	* [`station`](#location_station)
 	* [`stop`](#location_stop)
   	* [`street`](#location_street)
@@ -241,24 +242,34 @@
 <a id="location"></a>
 ## Object: `location`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **id** | Unieke identifier voor deze locatie. |
-| **type** | Bevat het type locatie (zie `types.md` voor meer informatie). |
-| **name** | Bevat de naam van de locatie. |
-| **latLong** | Bevat een `latLong` object. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **id** | Unieke identifier voor deze locatie. | String |
+| **type** | Bevat het type locatie (zie `types.md` voor meer informatie). | LocationType |
+| **name** | Bevat de naam van de locatie. | String |
+| **latLong** | Bevat een `latLong` object. | LatLong |
+
+---
+
+<a id="location_address"></a>
+## Object: `location` -> `address`
+
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **houseNr** | Bevat het huisnummer van het adres | String |
+| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | Location -> Place |
 
 ---
 
 <a id="location_station"></a>
 ## Object: `location` -> `station`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **stationId** | Bevat de afkorting zoals deze bekend is bij de NS. |
-| **stationType** | Bevat het type station (zie `types.md` voor meer informatie). |
-| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. |
-| **urls** | Bevat een `urls` object. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **stationId** | Bevat de afkorting zoals deze bekend is bij de NS. | String |
+| **stationType** | Bevat het type station (zie `types.md` voor meer informatie). | StationType |
+| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | Location -> Place |
+| **urls** | Bevat een `urls` object. | Urls |
 
 ---
 
@@ -276,23 +287,24 @@
 <a id="location_street"></a>
 ## Object: `location` -> `street`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **place** | Bevat een `location` met als `type=place`, indien beschikbaar. | Location -> Place |
 
 ---
 
 <a id="location_place"></a>
 ## Object: `location` -> `place`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **regionCode** | Bevat de afkorting van de provincie waar de plaats zich in bevindt. (bv. NH of UT) |
-| **regionName** | Bevat de volledige naam van de provincie waar de plaats zich in bevindt. (bv. Noord-Holland of Utrecht) |
-| **showRegion** | Bevat een `boolean` die aangeeft of de naam van de regio zichtbaar moet zijn in de app. |
-| **countryCode** | Bevat de afkorting van het land waar de plaats zich in bevindt. (bv. NL) |
-| **countryName** | Bevat de volledige naam van het land waar de plaats zich in bevindt. (bv. Nederland) |
-| **showCountry** | Bevat een `boolean` die aangeeft of de naam van het land zichtbaar moet zijn in de app. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **name** | Bevat de naam van de plaats. | String |
+| **regionCode** | Bevat de afkorting van de provincie waar de plaats zich in bevindt. (bv. NH of UT) | String |
+| **regionName** | Bevat de volledige naam van de provincie waar de plaats zich in bevindt. (bv. Noord-Holland of Utrecht) | String |
+| **showRegion** | Bevat een `boolean` die aangeeft of de naam van de regio zichtbaar moet zijn in de app. | Boolean |
+| **countryCode** | Bevat de afkorting van het land waar de plaats zich in bevindt. (bv. NL) | String |
+| **countryName** | Bevat de volledige naam van het land waar de plaats zich in bevindt. (bv. Nederland) | String |
+| **showCountry** | Bevat een `boolean` die aangeeft of de naam van het land zichtbaar moet zijn in de app. | Boolean |
 
 ---
 
@@ -395,13 +407,13 @@
 <a id="stop"></a>
 ## Object: `stop`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **arrival** | Bevat een aankomstdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. |
-| **departure** | Bevat een vertrekdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. |
-| **platform** | Bevat het spoor of platform waar deze trein of bus (o.i.d.) stopt. |
-| **location** | Bevat een `location` object. |
-| **fallbackName** | Onbekend. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **arrival** | Bevat een aankomstdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
+| **departure** | Bevat een vertrekdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
+| **platform** | Bevat het spoor of platform waar deze trein of bus (o.i.d.) stopt. | String |
+| **location** | Bevat een `location` object. | Location |
+| **fallbackName** | Onbekend. | |
 
 ---
 
@@ -420,10 +432,10 @@
 <a id="urls"></a>
 ## Object: `urls`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **nl-NL** | Bevat het pad van een Nederlandse URL met betrekking tot deze locatie. |
-| **en-GB** | Bevat het pad van een Engelse URL met betrekking tot deze locatie. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **nl-NL** | Bevat het pad van een Nederlandse URL met betrekking tot deze locatie. | String |
+| **en-GB** | Bevat het pad van een Engelse URL met betrekking tot deze locatie. | String |
 
 ---
 

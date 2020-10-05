@@ -1,5 +1,6 @@
 # Objects
 ## Inhoudsopgave
+* [`attribute`](#attribute)
 * [`calamity`](#calamity)
 * [`clusterPoint`](#cluster_point)
 * [`clusterRange`](#cluster_range)
@@ -33,6 +34,16 @@
 * [`urls`](#urls)
 * [`use`](#use)
 * [`usedLocation`](#used_location)
+
+---
+
+<a id="attribute"></a>
+## Object: `attribute`
+
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **id** | Identifier van het attribuut | String |
+| **title** | Aanduiding van attribuut | String |
 
 ---
 
@@ -176,7 +187,7 @@
 |-----:|:-------------|:----|
 | **id** | Unieke identifier voor deze reis. | String |
 | **ludMessages** | Bevat een array van `ludMessage` objecten. | List of LudMessage |
-| **fasterJourneyId** | Bevat een unieke identifier van een snellere reis. (optioneel) | String |
+| **fasterJourneyId** | Bevat een unieke identifier van een snellere reis. | String? |
 | **departure** | Bevat een vertrekdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
 | **arrival** | Bevat een aankomstdatum (inclusief tijd) in het formaat `yyyy-MM-ddTHH:mm`. | DateTime |
 | **numberOfChanges** | Bevat het aantal overstappen dat in de reis gemaakt moet worden. | Integer |
@@ -199,17 +210,18 @@
 <a id="leg"></a>
 ## Object: `leg`
 
-| Naam | Omschrijving |
-|-----:|:-------------|
-| **type** | Bevat het type leg (zie `types.md` voor meer informatie). |
-| **mode** | Bevat een `mode` object. |
-| **destination** | Bevat de naam van de bestemming van deze leg. |
-| **operator** | Bevat een `operator` object. |
-| **service** | Onbekend. |
-| **attributes** | Onbekend. |
-| **disturbancePlannerIds** | Onbekend. |
-| **serivceMessageIds** | Onbekend. |
-| **stops** | Bevat een array van `stop` objecten. |
+| Naam | Omschrijving | Type |
+|-----:|:-------------|:-----|
+| **type** | Bevat het type leg (zie `types.md` voor meer informatie). | LegType |
+| **duration** | Duur van leg in de reis in format "hh:mm" | String? |
+| **mode** | Bevat een `mode` object. | Mode |
+| **destination** | Bevat de naam van de bestemming van deze leg. | String? |
+| **operator** | Bevat een `operator` object. | Operator? |
+| **service** | Nummer van het desbetreffende vervoersmiddel | Integer? |
+| **attributes** | Bevat een `attribute` object.. | List of Attribute? |
+| **disturbancePlannerIds** | Onbekend. | |
+| **serivceMessageIds** | Onbekend. | |
+| **stops** | Bevat een array van `stop` objecten. | List of Stop |
 
 ---
 
